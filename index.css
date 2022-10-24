@@ -1,0 +1,674 @@
+:root {
+  --font: 1vw;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  background-image: url(images/dave.image2\(1\).jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "barlow condensed";
+  color: whitesmoke;
+}
+
+body > div > div {
+  margin: 5vw;
+  padding: 2vw;
+  border-radius: 15px;
+  background-color: rgb(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-family: "Bungee Outline";
+  padding-top: 2vh;
+  font-size: calc(3 * var(--font));
+  margin: 0;
+}
+
+/* IKON 1 */
+#psycho_drama .album_data {
+  position: relative;
+}
+
+#psycho_drama .album_data:before {
+  background-image: url(images/number-1-icon.png);
+  background-repeat: no-repeat;
+  background-size: 7vh 7vh;
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  height: 100px;
+  width: 100px;
+}
+
+.album_data h2 {
+  margin-top: 0;
+  margin-bottom: 4vw;
+  font-family: "BarlowCondensed-Semibold.ttf";
+}
+
+.song_list h2 {
+  margin-bottom: 0;
+}
+
+header > h1 {
+  font-family: "Bungee Shade";
+  font-size: calc(6 * var(--font));
+  color: rgba(245, 245, 245, 0.8);
+  margin-bottom: 5vh;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding-bottom: 7vh;
+  padding-top: 5vh;
+}
+
+nav > div {
+  border-radius: 10px;
+  border: 5px;
+  background-color: rgba(245, 245, 245, 0.5);
+  padding: 15px;
+  flex-grow: 1;
+  text-align: center;
+  font-size: calc(2 * var(--font));
+  margin-bottom: 5vh;
+  flex-basis: 25%;
+}
+
+div > nav > div:first-child:hover,
+div > nav > div:nth-child(3):hover,
+div > nav > div:nth-child(4):hover {
+  cursor: pointer;
+  background-color: rgb(0, 0, 0, 0.2);
+}
+
+.marked {
+  box-shadow: 0 0 10px whitesmoke;
+  border: 1px solid whitesmoke;
+  color: black;
+  font-family: "BarlowCondensed-Semibold.ttf";
+}
+
+#we_all_alone,
+#psycho_drama {
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid whitesmoke;
+}
+
+.cover {
+  grid-row: 1;
+  grid-column: 2;
+  position: relative;
+}
+
+.show_hover {
+  position: absolute;
+  opacity: 1;
+  transition-duration: 1s;
+  transition-property: opacity;
+}
+
+.show_hover:hover {
+  opacity: 0;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+
+.album_data,
+.album_description {
+  font-size: calc(1.3 * var(--font));
+}
+
+.album_data ul {
+  list-style: none;
+}
+
+.album_description p {
+  margin-top: 10vh;
+}
+
+/* FIRST GRID */
+article {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: repeat(3, auto);
+  gap: 1vw;
+  padding: 2vw;
+  margin-bottom: 5vh;
+}
+
+/* SECOND GRID */
+.song_list {
+  grid-column: 2;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1vw;
+  font-size: calc(1 * var(--font));
+}
+
+.song_list ul {
+  list-style: decimal;
+  margin-top: 0;
+}
+
+
+#we_all_alone .song_list div:first-child {
+  border-radius: 0 0 0 25px;
+  background-color: #be3e5b;
+  color: #eddbe7;
+  padding-left: 1vw;
+}
+
+#we_all_alone .song_list div:nth-child(2) {
+  border-radius: 0 0 25px 0;
+  background-color: #be3e5b;
+  color: #eddbe7;
+  padding-left: 1vw;
+}
+
+/* THIRD GRID */
+#we_all_alone .anecdotes {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  grid-row: 3;
+  grid-column: 1/3;
+  margin: 0;
+  padding: 0;
+  gap: 0.5vw;
+  margin-top: -2vh;
+}
+
+.anecdotes li {
+  list-style: none;
+  font-size: calc(1 * var(--font));
+  padding: 3vw 0.1vw;
+}
+
+.top_right_90,
+.two_wide-bottom_left_90,
+.image-image_1-top_left_90,
+.bottom_right_90,
+.top_left_90,
+.two_wide-image-image_1-top_left_90 {
+  grid-row: 3;
+}
+
+.empty,
+.empty-tablet_empty,
+.empty-phone_empty {
+  display: none;
+}
+
+.image-image_1-top_left_90 {
+  grid-column: 5;
+}
+
+.bottom_right_90 {
+  grid-column: 6;
+}
+
+#we_all_alone .anecdotes li:first-child {
+  color: #070707;
+  background-color: #b9d1dd;
+  grid-column: 3 / 5;
+  border-radius: 25px 25px 25px 0;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+#we_all_alone .anecdotes li:nth-child(3) {
+  color: #070707;
+  background-color: #b9d1dd;
+  grid-column: 1;
+  border-radius: 25px 0 25px 25px;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+#we_all_alone .anecdotes li:nth-child(6) {
+  color: #eddbe7;
+  grid-column: 5;
+  background-image: url(images/dave.image\(1\).jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 3vh;
+  padding-left: 1vw;
+  border-radius: 0 25px 25px 25px;
+}
+
+#we_all_alone .anecdotes li:nth-child(7) {
+  color: #070707;
+  background-color: #b9d1dd;
+  grid-column: 6;
+  border-radius: 25px 25px 0 25px;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+#psycho_drama .song_list div:first-child {
+  border-radius: 0 0 0 25px;
+  background-color: #000000;
+  color: #0d9bff;
+  padding-left: 1vw;
+}
+
+#psycho_drama .song_list div:nth-child(2) {
+  border-radius: 0 0 25px 0;
+  background-color: #000000;
+  color: #0d9bff;
+  padding-left: 1vw;
+}
+
+/* LAST GRID */
+#psycho_drama .anecdotes {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  grid-row: 3;
+  grid-column: 1/3;
+  margin: 0;
+  padding: 0;
+  gap: 0.5vw;
+  margin-top: -2vh;
+}
+
+#psycho_drama .anecdotes li:nth-child(5) {
+  color: #eddbe7;
+  grid-column: 4 / 6;
+  background-image: url(images/dave_stormzy1.jpg);
+  background-size: cover;
+  background-position: 10% 10%;
+  background-repeat: no-repeat;
+  padding-bottom: 3vh;
+  padding-left: 2vw;
+  border-radius: 0 25px 25px 25px;
+  display: flex;
+  align-items: flex-end;
+}
+
+#psycho_drama .anecdotes li:first-child {
+  border-radius: 25px 25px 25px 0;
+  background-color: #0d9bff;
+  color: #000000;
+  grid-column: 1 / 3;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+#psycho_drama .anecdotes li:nth-child(2) {
+  background-color: #0d9bff;
+  color: #000000;
+  border-radius: 0 25px 25px 25px;
+  grid-column: 3;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+#psycho_drama .anecdotes li:last-child {
+  background-color: #0d9bff;
+  color: #000000;
+  border-radius: 25px 25px 0 25px;
+  display: flex;
+  align-items: center;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+footer {
+  display: flex;
+  align-items: flex-end;
+  padding-top: 1vh;
+  font-size: calc(1 * var(--font));
+}
+
+/*----------------------------- BREAK POINT 1111PX -------------------------------*/
+
+@media (min-width: 1111px) {
+  header > h1 {
+    font-size: 66.6px;
+  }
+
+  h1,
+  h2 {
+    font-size: 22.2px;
+  }
+
+  .album_data,
+  .album_description {
+    font-size: 14.5333px;
+  }
+
+  .song_list,
+  .anecdotes {
+    font-size: 11.1px;
+  }
+
+  #psycho_drama .anecdotes li:nth-child(2) {
+    font-size: 11.1px;
+  }
+}
+/*----------------------------- BREAK POINT 900PX -------------------------------*/
+
+@media (max-width: 900px) {
+  header > h1 {
+    font-size: 54px;
+  }
+
+  h1,
+  h2 {
+    font-size: 18px;
+  }
+
+  .album_data,
+  .album_description {
+    font-size: 11.6833px;
+  }
+
+  .song_list,
+  .anecdotes {
+    font-size: 9px;
+  }
+
+  #psycho_drama .anecdotes li:nth-child(2) {
+    font-size: 9px;
+  }
+}
+/*----------------------------- BREAK POINT 800PX -------------------------------*/
+
+@media (max-width: 800px) {
+  body {
+    background-image: url(images/dave.image800.jpg);
+  }
+
+  header > h1 {
+    text-align: center;
+    font-size: 10vw;
+  }
+
+  h1 {
+    font-size: 4vw;
+  }
+
+  h2 {
+    font-size: 3vw;
+  }
+  /* MAIN GRID */
+  article {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .cover {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .show_hover:hover {
+    opacity: 1;
+  }
+
+  .album_data,
+  .album_description {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    font-size: 2vw;
+  }
+  /* SONG GRID*/
+  .song_list {
+    grid-column: 2;
+    grid-row: 1;
+    grid-template-rows: 1fr 1fr;
+    font-size: 1.5vw;
+  }
+
+  #we_all_alone .song_list div:first-child {
+    grid-column: 1 / 3;
+    border-radius: 0 25px 0 0;
+    padding-top: 2vh;
+  }
+
+  #we_all_alone .song_list div:nth-child(2) {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    border-radius: 0 0 25px 0;
+    padding-top: 2vh;
+  }
+
+  #psycho_drama .song_list div:first-child {
+    grid-column: 1 / 3;
+    border-radius: 0 25px 0 0;
+    padding-top: 2vh;
+  }
+
+  #psycho_drama .song_list div:nth-child(2) {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    border-radius: 0 0 25px 0;
+    padding-top: 2vh;
+  }
+  /* ANECDOTES 1 GRID*/
+  #we_all_alone .anecdotes {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .anecdotes li {
+    font-size: 1.5vw;
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+  }
+
+  #we_all_alone .anecdotes li:nth-child(3) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #we_all_alone .anecdotes li:first-child {
+    grid-column: 3 / 5;
+    grid-row: 1;
+  }
+
+  #we_all_alone .anecdotes li:nth-child(6) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  #we_all_alone .anecdotes li:nth-child(7) {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  /* ANECDOTES 2 GRID*/
+  #psycho_drama .anecdotes {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  #psycho_drama .anecdotes li:first-child {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  #psycho_drama .anecdotes li:nth-child(2) {
+    font-size: 1.5vw;
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  #psycho_drama .anecdotes li:nth-child(5) {
+    grid-column: 2 / 4;
+    grid-row: 2;
+  }
+
+  #psycho_drama .anecdotes li:last-child {
+    grid-column: 4;
+    grid-row: 2;
+  }
+
+  img {
+    border-radius: 25px 0 0 25px;
+  }
+
+  nav > div {
+    font-size: 16.5px;
+  }
+
+  #psycho_drama .album_data:before {
+    top: -10px;
+    left: -20px;
+  }
+
+  footer {
+    font-size: 1.5vw;
+  }
+}
+
+/*----------------------------- BREAK POINT 500PX -------------------------------*/
+
+@media (max-width: 500px) {
+  body {
+    background-image: url(images/dave.image500.jpg);
+  }
+
+  header > h1 {
+    font-size: 12vw;
+  }
+
+  img {
+    border-radius: 25px 25px 0 0;
+  }
+
+  body > div > div {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  h1 {
+    font-size: 5vw;
+  }
+
+  h2 {
+    font-size: 4vw;
+  }
+  /* MAIN GRID */
+  article {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+  }
+
+  .album_data,
+  .album_description {
+    grid-column: 1;
+    grid-row: 3;
+    font-size: 3vw;
+  }
+  /* SONG GRID*/
+  .song_list {
+    grid-column: 1;
+    grid-row: 2;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    font-size: 2.5vw;
+  }
+
+  .song_list h2 {
+    margin-top: 0;
+  }
+
+  #we_all_alone .song_list div:first-child {
+    grid-column: 1;
+    border-radius: 0 0 0 25px;
+  }
+
+  #we_all_alone .song_list div:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+    border-radius: 0 0 25px 0;
+  }
+
+  #psycho_drama .song_list div:first-child {
+    grid-column: 1;
+    border-radius: 0 0 0 25px;
+  }
+
+  #psycho_drama .song_list div:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+    border-radius: 0 0 25px 0;
+  }
+  /* ANECDOTES 1 GRID */
+  #we_all_alone .anecdotes {
+    grid-column: 1;
+    grid-row: 4;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .anecdotes li {
+    font-size: 2vw;
+    padding-top: 9vh;
+    padding-bottom: 9vh;
+  }
+
+  #we_all_alone .anecdotes li:first-child {
+    grid-column: 2 / 4;
+    grid-row: 1;
+  }
+  /* ANECDOTES 2 GRID */
+  #psycho_drama .anecdotes {
+    grid-column: 1;
+    grid-row: 4;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  #psycho_drama .anecdotes li:first-child {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  #psycho_drama .anecdotes li:nth-child(2) {
+    grid-column: 3;
+    grid-row: 1;
+    font-size: 2vw;
+  }
+
+  #psycho_drama .anecdotes li:nth-child(5) {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+
+  #psycho_drama .anecdotes li:last-child {
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  nav > div {
+    font-size: 16.5px;
+  }
+
+  footer {
+    font-size: 2vw;
+  }
+}
